@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My GitHub Pages Site</title>
+    <title>Copying to clipboard...</title>
   </head>
   <body>
-    <h1>Hello world!</h1>
-    <p>Welcome to my GitHub Pages site!</p>
+    <p>Copying to clipboard, please wait...</p>
+    <script>
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+text = urlParams.get('text');
+navigator.clipboard.writeText(text);
+//alert(text);
+//close();
+setTimeout(function(){close();}, 100);
+</script>
   </body>
 </html>
